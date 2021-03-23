@@ -1,0 +1,13 @@
+body{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #999ccc;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  border: 1px solid blueviolet;
+}

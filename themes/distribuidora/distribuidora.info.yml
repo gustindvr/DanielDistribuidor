@@ -1,0 +1,17 @@
+name: Distribuidora
+type: theme
+description: Distribuidora theme.'
+package: Other
+core_version_requirement: 9.x
+libraries:
+  - distribuidora/global-styling
+base theme: classy
+regions:
+  branding: Branding
+  navigation: Main navigation
+  search: Search
+  content: Content
+  right_sidebar: Right sidebar
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer Third

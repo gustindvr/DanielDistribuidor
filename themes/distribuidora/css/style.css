@@ -5,9 +5,3 @@ body{
   flex-flow: row wrap;
   background-color: #999ccc;
 }
-
-img{
-  width: 200px;
-  height: 200px;
-  border: 1px solid blueviolet;
-}

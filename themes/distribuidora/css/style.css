@@ -1,7 +1,81 @@
 body{
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 20px;
+  
+  background: #43c6ac;
+  background: -webkit-linear-gradient(to right, #43c6ac, #f8ffae);
+  background: linear-gradient(to right, #43c6ac, #f8ffae);
+}
+
+h2{
+  width: 100%;
+  font-size: 26px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #e17055;
+  text-align: center;
+}
+
+img{
+  max-width: 300px;
+  max-height: 400px;
+}
+
+.container{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.footer{
+  width: 100%;
+  position: fixed;
+  background: #093028;
+  background: -webkit-linear-gradient(to right, #237A57, #093028);
+  background: linear-gradient(to right, #237A57, #093028);
+  color: rgb(236, 236, 236);
+  left: 0;
+  bottom: 0;
+}
+
+.catalogo{
+  flex-basis: 80%;
+  color: black;
+  padding: 10px;
+}
+
+.marca{
+  margin: 10px;
   display: flex;
   flex-flow: row wrap;
-  background-color: #999ccc;
+  justify-content: center;
+}
+
+.product{
+  display: flex;
+  flex-flow: column nowrap;
+  flex-basis: 20%;
+  justify-content: space-between;
+  margin: 10px 10px;
+  padding: 5px;
+  box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.27);
+  -webkit-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.27);
+  -moz-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.27);
+}
+
+.footer_product{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: left;
+}
+
+.contact{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+
+.sale{
+  display: flex;
+  border: 1px dashed darkolivegreen;
+  justify-content: center;
+  padding: 5px;
 }

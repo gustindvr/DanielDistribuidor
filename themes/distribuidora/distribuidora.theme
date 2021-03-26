@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\image\Entity\ImageStyle;
+
 function distribuidora_preprocess_node(&$vars) {
   if (isset($vars['node'])) {
     $node = $vars['node'];
@@ -22,19 +24,24 @@ function distribuidora_preprocess_node(&$vars) {
               $term_name = $term[0]->getName();
               $term_id = $term[0]->id();
               $product_title = $indNode->getTitle();
-              $image = $indNode->get("field_image")->getValue()[0]['target_id'];
+              $image_field = $indNode->get('field_image');
+              if (!$image_field->isEmpty()) {
+                $uri = $image_field->entity->uri->value;
+                $style = ImageStyle::load('thumbnail');
+                $url = $style->buildUrl($uri);
+              }
 
           $data[$term_id][] = [
               'marca' => $term_name,
               'product_title' => $product_title,
               'precio' => $indNode->get("field_precio")->getValue()[0]['value'],
               'codigo' => $indNode->get("field_cod_")->getValue()[0]['value'],
-              'imagen' => $image,
+              'imagen_url' => $url,
               'oferta' => (!empty($indNode->get("field_oferta")->getValue()[0]['value']) ? $indNode->get("field_oferta")->getValue()[0]['value'] : null ),
             ];
             }
         }
-
+      /*print json_encode($data);*/
       $vars['lista_de_productos'] = $data;
 
     }

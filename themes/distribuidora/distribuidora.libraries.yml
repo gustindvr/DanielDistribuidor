@@ -1,7 +1,9 @@
 global-styling:
   version: 1.x
   js:
+    js/aos.js: {}
     js/script.js: {}
   css:
     theme:
+      css/aos.css: {}
       css/style.css: {}

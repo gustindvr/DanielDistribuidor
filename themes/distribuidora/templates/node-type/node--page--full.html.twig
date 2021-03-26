@@ -4,17 +4,17 @@
   <div class="catalogo">
 
     {% for lista_producto in lista_de_productos %}
-      <div class="marca">
+      <div class="marca"  >
         <h2>{{ lista_producto[0].marca }}</h2>
 
         {% for product in lista_producto %}
 
-          <!--{{dump(product)}}-->
-          <div class="product" data-aos="fade-up">
+          <div class="product" data-aos="flip-up">
+
             <h3>{{ product.product_title }}</h3>
-            <!--
-            <img alt="{{ product.imagen }}" src="{{ file_url(product.imagen) }}"/>
-            -->
+            <div class="img_size">
+              <img src="{{ product.imagen_url }}" />
+            </div>
             <p class="footer_product">
               <strong> Precio: ${{ product.precio }}</strong>
               <strong>Cod: {{product.codigo}}</strong>
@@ -41,7 +41,7 @@
         <strong>Distribuidor:</strong> Daniel Rodriguez
       </li>
       <li>
-        <strong>Contacto:</strong> 1111111111 
+        <strong>Contacto:</strong> 1128658767 
       </li>
       <li>
       <strong>E-mail:</strong> danielrod@hotmail.com

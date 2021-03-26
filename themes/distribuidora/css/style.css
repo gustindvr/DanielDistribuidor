@@ -27,7 +27,7 @@ h2{
   color: rgb(236, 236, 236);
   left: 0;
   bottom: 0;
-  opacity: 0.;
+  opacity: 0.8;
 }
 
 .catalogo{
@@ -56,11 +56,6 @@ h2{
   background-color: white
 }
 
-.img_size{
-  width: 100%;
-  height: 100%;
-
-}
 
 .footer_product{
   display: flex;
@@ -82,13 +77,46 @@ h2{
   padding: 5px;
 }
 
-h1 {
+h1{
   margin-top: 0;
-  text-align: left;
+  text-align: center;
   padding-top: 50px;
-  padding-left: 30px;
-  height: 100px;
-  background-image: url('../../../sites/default/files/Svg/wave.svg');
+  padding-right: 30px;
+  height: 200px;
+  background-color: #093028;
+  color:#5c5a5ace;
+  font-size: 128px;
+}
+
+.page-title{
+  background-image: url('../../../sites/default/files/Svg/shopping-650046_1280.png');
+  background-position: center;
   background-size: cover;
-  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width: 600px){
+  h1{
+    font-size: 60px;
+  }
+
+  .marca{
+    padding: 2px;
+  }
+
+  .product{
+    padding: 2px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 5%;
+    margin: 2px;
+}
+
+@media (min-width: 601px) and (max-width: 1260px) {
+  h1{
+    font-size: 90px;
+  }
 }

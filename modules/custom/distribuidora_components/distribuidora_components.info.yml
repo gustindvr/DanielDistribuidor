@@ -1,5 +1,0 @@
-name: Products Dist Components
-type: module
-description: 'Products components helper module.'
-core_version_requirement: ^9
-package: Custom

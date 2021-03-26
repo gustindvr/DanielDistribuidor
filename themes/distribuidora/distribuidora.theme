@@ -1,0 +1,68 @@
+<?php
+
+use Drupal\image\Entity\ImageStyle;
+
+function distribuidora_preprocess_node(&$vars) {
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    
+    if($node->getType() == 'page'){
+      $marcas = $node->get('field_marcas')->referencedEntities();
+        
+        $terms = [];
+
+      foreach($marcas as $marca){
+        $terms[] = $marca->id();
+      }
+
+      $nodes = getNodesByTaxonomyTermIds($terms);
+      $data = [];
+
+        foreach($nodes as $indNode){
+          if($indNode->getType() == 'product'){
+              $term = $indNode->field_marca->referencedEntities();
+              $term_name = $term[0]->getName();
+              $term_id = $term[0]->id();
+              $product_title = $indNode->getTitle();
+              $image_field = $indNode->get('field_image');
+              if (!$image_field->isEmpty()) {
+                $uri = $image_field->entity->uri->value;
+                $style = ImageStyle::load('thumbnail');
+                $url = $style->buildUrl($uri);
+              }
+
+          $data[$term_id][] = [
+              'marca' => $term_name,
+              'product_title' => $product_title,
+              'precio' => $indNode->get("field_precio")->getValue()[0]['value'],
+              'codigo' => $indNode->get("field_cod_")->getValue()[0]['value'],
+              'imagen_url' => $url,
+              'oferta' => (!empty($indNode->get("field_oferta")->getValue()[0]['value']) ? $indNode->get("field_oferta")->getValue()[0]['value'] : null ),
+            ];
+            }
+        }
+      /*print json_encode($data);*/
+      $vars['lista_de_productos'] = $data;
+
+    }
+  }
+}
+
+function getNodesByTaxonomyTermIds($termIds){
+  $termIds = (array) $termIds;
+  if(empty($termIds)){
+    return NULL;
+  }
+
+  $query = \Drupal::database()->select('taxonomy_index', 'ti');
+  $query->fields('ti', array('nid'));
+  $query->condition('ti.tid', $termIds, 'IN');
+  $query->distinct(TRUE);
+  $result = $query->execute();
+
+  if($nodeIds = $result->fetchCol()){
+    return \Drupal::service('entity_type.manager')->getStorage('node')->loadMultiple($nodeIds);
+  }
+
+  return NULL;
+}

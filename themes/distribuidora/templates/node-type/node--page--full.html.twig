@@ -1,11 +1,26 @@
 
 <div class="container">
-  
-  <div class="catalogo">
+
+  <div class="up">
+    <a href="#block-distribuidora-page-title"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+  </div>
+
+  <button id="menu"><i class="fas fa-hamburger fa-3x"></i></button>
+  <nav class="navbar" id="navbar">
+  {% for lista_producto in lista_de_productos %}
+    <ul id="list">
+      <li>
+        <a href="#{{lista_producto[0].marca}}">{{lista_producto[0].marca}}</a>
+      </li>
+    </ul>
+  {% endfor %}
+  </nav>
+
+  <main class="catalogo">
 
     {% for lista_producto in lista_de_productos %}
       <div class="marca"  >
-        <h2>{{ lista_producto[0].marca }}</h2>
+        <h2 id="{{ lista_producto[0].marca }}">{{ lista_producto[0].marca }}</h2>
 
         {% for product in lista_producto %}
 
@@ -33,9 +48,9 @@
       </div>
     {% endfor %}
 
-  </div>
+  </main>
 
-  <div class="footer">
+  <adress class="footer">
     <ul class="contact">
       <li>
         <strong>Distribuidor:</strong> Daniel Rodriguez
@@ -47,5 +62,5 @@
       <strong>E-mail:</strong> danielrod@hotmail.com
       </li>
     </ul>
-  </div>
+  </adress>
 </div>

@@ -5,6 +5,27 @@ body{
   text-align: center;
 }
 
+
+h1{
+  margin-top: 0;
+  margin-left: 0;
+  padding: 10% 0;
+  width: 100%;
+  height: 30vh;
+  background-image: url('../../../sites/default/files/Svg/market.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+span{
+  background-color: rgba(169, 169, 169, 0.13);
+  border-radius: 25%;
+  color: rgb(3, 3, 3);
+  font-size: 100px;
+  text-shadow: 2px 2px 2px whitesmoke;
+}
+
+
 h2{
   width: 100%;
   font-size: 35px;
@@ -16,6 +37,34 @@ h2{
 .container{
   display: flex;
   flex-flow: column nowrap;
+}
+
+.navbar{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+}
+
+.navbar ul{
+  list-style: none;
+  padding: 3px;
+  margin: 3px;
+}
+
+.navbar a{
+  text-decoration: none;
+  margin: 3px;
+  padding: 3px;
+  color: black;
+  border: 1px solid #093028;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.navbar a:hover{
+  background-color: #237A57;
 }
 
 .footer{
@@ -56,7 +105,6 @@ h2{
   background-color: white
 }
 
-
 .footer_product{
   display: flex;
   flex-flow: column wrap;
@@ -77,26 +125,24 @@ h2{
   padding: 5px;
 }
 
-h1{
-  margin-top: 0;
-  margin-left: 0;
-  padding: 10% 0;
-  width: 100%;
-  height: 30vh;
-  background-image: url('../../../sites/default/files/Svg/market.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+.up{
+  position: fixed;
+  bottom: 0px;
+  right: 0px; 
+  padding-bottom: 60px;
+  padding-right: 5px;
+  z-index: 10;
 }
 
-span{
-  background-color: rgba(169, 169, 169, 0.13);
-  border-radius: 25%;
-  color: rgb(3, 3, 3);
-  font-size: 100px;
-  text-shadow: 2px 2px 2px whitesmoke;
+.up a{
+  color: black;
 }
 
-@media (min-width:100px) and (max-width: 800px){
+#menu{
+  display: none;
+}
+
+@media all and (max-width: 800px){
   h1{
     height: 15vh;
     padding: auto;
@@ -106,6 +152,22 @@ span{
     margin-top: 25px;
     font-size: 50px;
   }
+
+  #menu{
+    background-color: transparent !important;
+    border: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar ul {
+    display: inline-flex;
+  }
+
 }
 
 @media (min-width: 801px){

@@ -1,8 +1,9 @@
 global-styling:
   version: 1.x
   js:
-    js/aos.js: {}
     js/script.js: {}
+    js/aos.js: {}
+    js/fontawesome.js: {}
   css:
     theme:
       css/aos.css: {}

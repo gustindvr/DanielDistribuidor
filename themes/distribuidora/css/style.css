@@ -1,21 +1,70 @@
 body{
-  background-color: #DCD9D4;
+  background-color: #303458;
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
   background-blend-mode: soft-light,screen;
   text-align: center;
 }
 
+
+h1{
+  margin-top: 0;
+  margin-left: 0;
+  padding: 10% 0;
+  width: 100%;
+  height: 30vh;
+  background-image: url('../../../sites/default/files/Svg/market.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+span{
+  background-color: rgba(169, 169, 169, 0.13);
+  border-radius: 25%;
+  color: rgb(3, 3, 3);
+  font-size: 100px;
+  text-shadow: 2px 2px 2px whitesmoke;
+}
+
+
 h2{
   width: 100%;
-  font-size: 26px;
+  font-size: 35px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #aa023a;
+  color: black;
   text-align: center;
 }
 
 .container{
   display: flex;
   flex-flow: column nowrap;
+}
+
+.navbar{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+}
+
+.navbar ul{
+  list-style: none;
+  padding: 3px;
+  margin: 3px;
+}
+
+.navbar a{
+  text-decoration: none;
+  margin: 3px;
+  padding: 3px;
+  color: black;
+  border: 1px solid #093028;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.navbar a:hover{
+  background-color: #237A57;
 }
 
 .footer{
@@ -50,12 +99,11 @@ h2{
   justify-content: space-between;
   margin: 10px 10px;
   padding: 5px;
-  box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.27);
-  -webkit-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.27);
-  -moz-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.27);
+  box-shadow: 5px 11px 14px 3px rgba(0, 0, 0, 0.700);
+  -webkit-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.700);
+  -moz-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.700);
   background-color: white
 }
-
 
 .footer_product{
   display: flex;
@@ -77,46 +125,53 @@ h2{
   padding: 5px;
 }
 
-h1{
-  margin-top: 0;
-  text-align: center;
-  padding-top: 50px;
-  padding-right: 30px;
-  height: 200px;
-  background-color: #093028;
-  color:#5c5a5ace;
-  font-size: 128px;
+.up{
+  position: fixed;
+  bottom: 0px;
+  right: 0px; 
+  padding-bottom: 60px;
+  padding-right: 5px;
+  z-index: 10;
 }
 
-.page-title{
-  background-image: url('../../../sites/default/files/Svg/shopping-650046_1280.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.up a{
+  color: black;
 }
 
+#menu{
+  display: none;
+}
 
-@media (max-width: 600px){
+@media all and (max-width: 800px){
   h1{
-    font-size: 60px;
+    height: 15vh;
+    padding: auto;
+  }
+  
+  span{
+    margin-top: 25px;
+    font-size: 50px;
   }
 
-  .marca{
-    padding: 2px;
-  }
-
-  .product{
-    padding: 2px;
-    justify-content: center;
-    width: 100%;
+  #menu{
+    background-color: transparent !important;
+    border: none;
     display: flex;
-    flex-flow: row wrap;
-    flex-basis: 5%;
-    margin: 2px;
+    justify-content: center;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar ul {
+    display: inline-flex;
+  }
+
 }
 
-@media (min-width: 601px) and (max-width: 1260px) {
-  h1{
-    font-size: 90px;
+@media (min-width: 801px){
+  span{
+    font-size: 100px;
   }
 }

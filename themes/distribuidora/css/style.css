@@ -164,6 +164,10 @@ h2{
     display: none;
   }
 
+  .is-active{
+    display: flex;
+  }
+
   .navbar ul {
     display: inline-flex;
   }

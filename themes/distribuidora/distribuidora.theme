@@ -41,7 +41,7 @@ function distribuidora_preprocess_node(&$vars) {
             ];
             }
         }
-      /*print json_encode($data);*/
+
       $vars['lista_de_productos'] = $data;
 
     }

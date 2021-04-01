@@ -47,13 +47,13 @@ h2{
 .navbar ul{
   list-style: none;
   padding: 3px;
-  margin: 3px;
+  margin: 10px;
 }
 
 .navbar a{
   text-decoration: none;
   margin: 3px;
-  padding: 3px;
+  padding: 8px;
   color: whitesmoke;
   border: 1px solid #093028;
   border-radius: 10px;

@@ -35,7 +35,7 @@ function distribuidora_preprocess_node(&$vars) {
               'marca' => $term_name,
               'product_title' => $product_title,
               'precio' => $indNode->get("field_precio")->getValue()[0]['value'],
-              'codigo' => $indNode->get("field_cod_")->getValue()[0]['value'],
+              'codigo' => (!empty($indNode->get("field_cod_")->getValue()[0]['value']) ? $indNode->get("field_cod_")->getValue()[0]['value'] : null ),
               'imagen_url' => $url,
               'oferta' => (!empty($indNode->get("field_oferta")->getValue()[0]['value']) ? $indNode->get("field_oferta")->getValue()[0]['value'] : null ),
             ];

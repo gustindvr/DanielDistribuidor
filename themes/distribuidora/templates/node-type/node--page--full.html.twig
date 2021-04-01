@@ -32,7 +32,9 @@
             </div>
             <p class="footer_product">
               <strong> Precio: ${{ product.precio }}</strong>
+              {% if product.codigo == true %}
               <strong>Cod: {{product.codigo}}</strong>
+              {% endif %}
             </p>
 
             {% if product.oferta == true %}

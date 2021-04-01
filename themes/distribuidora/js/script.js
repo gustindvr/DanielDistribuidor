@@ -8,8 +8,8 @@ const showMenu = () => {
 
 const start = () =>{
   showMenu();
+  AOS.init();
 }
 
 window.onload = start;
 
-AOS.init();

@@ -151,9 +151,11 @@ h2{
   }
 
   #menu{
+    font-size: 16px;
     background-color: transparent !important;
     border: none;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
   }
 

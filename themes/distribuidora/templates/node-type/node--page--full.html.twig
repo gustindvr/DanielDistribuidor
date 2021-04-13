@@ -24,7 +24,7 @@
         
         {% for product in lista_producto %}
 
-          <div class="product" data-aos="flip-up">
+          <div class="product">
 
             <h3>{{ product.product_title }}</h3>
             <div class="img_size">
@@ -38,8 +38,9 @@
             </p>
 
             {% if product.oferta == true %}
+                <strong>Oferta</strong>
               <div class="sale">
-                <strong>Oferta: $</strong>{{ product.oferta }}
+                {{ product.oferta }}
               </div>
             {% endif %}
 
@@ -61,7 +62,7 @@
         <strong>Contacto:</strong> 1128658767 
       </li>
       <li>
-      <strong>E-mail:</strong> danielrod@hotmail.com
+      <strong>E-mail:</strong> danielrod71@hotmail.com
       </li>
     </ul>
   </adress>

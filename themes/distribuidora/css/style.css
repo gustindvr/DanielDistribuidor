@@ -1,9 +1,11 @@
 body{
-  background-color: #5f627e;
+  background-color: white;
   text-align: center;
 }
 
 h1{
+  font-family: PermanentMarker;
+  letter-spacing: 50px;
   margin-top: 0;
   margin-left: 0;
   padding: 10% 0;
@@ -24,10 +26,11 @@ span{
 
 
 h2{
+  font-family: FredokaOne;
+  letter-spacing: 10px;
   width: 100%;
   font-size: 35px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: whitesmoke;
+  color: black;
   text-align: center;
 }
 
@@ -51,11 +54,12 @@ h2{
 }
 
 .navbar a{
+  font-family: Londrina-Light;
   text-decoration: none;
   margin: 3px;
   padding: 8px;
-  color: whitesmoke;
-  border: 1px solid #093028;
+  color: black;
+  border: 1px solid #6e0472;
   border-radius: 10px;
   list-style: none;
 }
@@ -83,6 +87,7 @@ h2{
 }
 
 .marca{
+  
   margin: 10px;
   display: flex;
   flex-flow: row wrap;
@@ -90,6 +95,7 @@ h2{
 }
 
 .product{
+  font-family: Londrina;
   display: flex;
   flex-flow: column nowrap;
   flex-basis: 20%;
@@ -99,7 +105,8 @@ h2{
   box-shadow: 5px 11px 14px 3px rgba(0, 0, 0, 0.700);
   -webkit-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.700);
   -moz-box-shadow: 5px 11px 14px 3px rgba(0,0,0,0.700);
-  background-color: white
+  border: 1px solid #6e0472;
+  border-radius: 20px;
 }
 
 .footer_product{
@@ -119,7 +126,7 @@ h2{
   display: flex;
   border: 2px dashed #aa023a;
   justify-content: center;
-  padding: 5px;
+
 }
 
 .up{
@@ -143,6 +150,7 @@ h2{
   h1{
     height: 15vh;
     padding: auto;
+    letter-spacing: 10px;
   }
   
   span{
@@ -172,10 +180,34 @@ h2{
     display: inline-flex;
   }
 
+  .product{
+    min-width: 210px;
+    min-height: 170px;
+  }
 }
 
 @media (min-width: 801px){
   span{
     font-size: 100px;
   }
+}
+
+@font-face {
+  font-family: "PermanentMarker";
+  src: url('../../../sites/default/fonts/Permanent_marker/PermanentMarker-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "FredokaOne";
+  src: url('../../../sites/default/fonts/Fredoka_One/FredokaOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Londrina";
+  src: url('../../../sites/default/fonts/Londrina_Solid/LondrinaSolid-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Londrina-Light";
+  src: url('../../../sites/default/fonts/Londrina_Solid/LondrinaSolid-Light.ttf') format('truetype');
 }

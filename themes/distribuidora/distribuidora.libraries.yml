@@ -6,5 +6,4 @@ global-styling:
     js/fontawesome.js: {}
   css:
     theme:
-      css/aos.css: {}
       css/style.css: {}
